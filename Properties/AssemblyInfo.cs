@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
@@ -8,9 +7,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SkyWin")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("ComIT Rejlers AB")]
+[assembly: AssemblyCompany("Victor Stodell")]
 [assembly: AssemblyProduct("SkyWin")]
-[assembly: AssemblyCopyright("Copyright © ComIT Rejlers AB 2009-2010")]
+[assembly: AssemblyCopyright("Copyright © Victor Stodell")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -31,5 +30,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("3.5.1001.0")]
-[assembly: AssemblyFileVersion("3.5.1001.0")]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]

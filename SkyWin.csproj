@@ -39,19 +39,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Comit, Version=3.5.0.0, Culture=neutral, PublicKeyToken=ccb44dd289844846, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ComIT\Comit\bin\Debug\Comit.dll</HintPath>
-    </Reference>
-    <Reference Include="Comit.Messaging, Version=3.5.908.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ComIT\Comit.Messaging\bin\Debug\Comit.Messaging.dll</HintPath>
-    </Reference>
-    <Reference Include="Comit.Personnel, Version=3.5.1001.0, Culture=neutral, PublicKeyToken=835089b87a8a8497, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\ComIT\Comit.Personnel\bin\Debug\Comit.Personnel.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -69,8 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
-    <Compile Include="Donation.cs" />
-    <Compile Include="Donations.cs" />
     <Compile Include="Statistic.cs" />
     <Compile Include="Statistics.cs" />
     <Compile Include="Database.cs" />

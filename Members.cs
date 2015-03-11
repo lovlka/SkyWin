@@ -1,34 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Data.OleDb;
 
-namespace SkyWin {
-	[Serializable]
-	public class Members : Comit.Collection<Member> {
-		public Members()
-			: this(false) {
-		}
+namespace SkyWin
+{
+    public class Members : List<Member>
+    {
+        public Members(bool sinners = false)
+        {
+            using (var connection = new OleDbConnection(Connection.String))
+            {
+                using (var command = new OleDbCommand())
+                {
+                    command.CommandText = "SELECT * FROM Member ";
 
-		public Members(bool sinners) {
-			using(OleDbConnection connection = new OleDbConnection(Connection.String)) {
-				using(OleDbCommand command = new OleDbCommand()) {
-					command.CommandText = "SELECT * FROM Member ";
+                    if (sinners)
+                    {
+                        command.CommandText += "WHERE Balance < 0 AND FirstName <> 'PAX' AND Lastname <> 'PAX' AND LicenseType <> 'E' ORDER BY Balance ASC";
+                    }
 
-					if(sinners) {
-						command.CommandText += "WHERE Balance < 0 AND FirstName <> 'PAX' AND Lastname <> 'PAX' AND LicenseType <> 'E' ORDER BY Balance ASC";
-					}
-
-					command.Connection = connection;
-					command.Connection.Open();
-					using(OleDbDataReader dataReader = command.ExecuteReader()) {
-						while(dataReader.Read()) {
-							Add(new Member(dataReader));
-						}
-					}
-				}
-			}
-		}
-	}
+                    command.Connection = connection;
+                    command.Connection.Open();
+                    using (var dataReader = command.ExecuteReader())
+                    {
+                        while (dataReader.Read())
+                        {
+                            Add(new Member(dataReader));
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
